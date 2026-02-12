@@ -15,7 +15,7 @@ end
 ELASTIC_243 = "v6"
 DEV_BASE  = "v8"
 RUBY_251  = "v4"
-RUBY_259  = "v4"
+RUBY_259  = "v5"
 RUBY_266  = "v4"
 RUBY_2610 = "v2"
 RUBY_273  = "v2"
@@ -38,6 +38,11 @@ def docker_build(image, tag, files)
     puts "docker image #{image}:#{tag} already exists"
   else
     puts "start #{image}:#{tag} build ..."
+    files.each do |file|
+      unless File.exist?("dockerfiles/#{file}")
+        raise "file dockerfiles/#{file} not exists"
+      end
+    end
     system("cd dockerfiles && (#{Array(files).map{|f| "cat #{f}"}.join("; ")}) | #{BUILD} -t #{image}:#{tag} - && docker push #{image}:#{tag}")
     raise "script failed" unless $?.success?
   end
