@@ -24,6 +24,7 @@ RUBY_275  = "v4"
 RUBY_302  = "v4"
 RUBY_311  = "v2"
 RUBY_322  = "v4"
+RUBY_327  = "v4"
 RUBY_335  = "v1"
 RUBY_342  = "v1"
 
@@ -60,6 +61,7 @@ docker_build("avakhov/dev-ruby", "2.7.5-#{RUBY_275}-#{ARCH}", ["dev_base", "ruby
 docker_build("avakhov/dev-ruby", "3.0.2-#{RUBY_302}-#{ARCH}", ["dev_base", "ruby302"])
 docker_build("avakhov/dev-ruby", "3.1.1-#{RUBY_311}-#{ARCH}", ["dev_base", "ruby311"])
 docker_build("avakhov/dev-ruby", "3.2.2-#{RUBY_322}-#{ARCH}", ["dev_base", "ruby322"])
+docker_build("avakhov/dev-ruby", "3.2.7-#{RUBY_327}-#{ARCH}", ["dev_base", "ruby327"])
 docker_build("avakhov/dev-ruby", "3.3.5-#{RUBY_335}-#{ARCH}", ["dev_base", "ruby335"])
 docker_build("avakhov/dev-ruby", "3.4.2-#{RUBY_342}-#{ARCH}", ["dev_base", "ruby342"])
 
