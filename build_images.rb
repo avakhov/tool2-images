@@ -15,6 +15,7 @@ end
 ELASTIC_243 = "v6"
 DEV_BASE  = "v8"
 RUBY_251  = "v4"
+RUBY_259  = "v4"
 RUBY_266  = "v4"
 RUBY_2610 = "v2"
 RUBY_273  = "v2"
@@ -45,6 +46,7 @@ end
 docker_build("avakhov/elasticsearch", "2.4.3-#{ELASTIC_243}-#{ARCH}", "elastic_243")
 docker_build("avakhov/dev-base", "#{DEV_BASE}-#{ARCH}", "dev_base")
 docker_build("avakhov/dev-ruby", "2.5.1-#{RUBY_251}-#{ARCH}", ["dev_base", "ruby251"])
+docker_build("avakhov/dev-ruby", "2.5.9-#{RUBY_259}-#{ARCH}", ["dev_base", "ruby259"])
 docker_build("avakhov/dev-ruby", "2.6.6-#{RUBY_266}-#{ARCH}", ["dev_base", "ruby266"])
 docker_build("avakhov/dev-ruby", "2.6.10-#{RUBY_2610}-#{ARCH}", ["dev_base", "ruby2610"])
 docker_build("avakhov/dev-ruby", "2.7.3-#{RUBY_273}-#{ARCH}", ["dev_base", "ruby273"])
